@@ -1,0 +1,44 @@
+
+main {
+    display: flex;
+    height: 100vh;
+    width: calc(100vw-2*17);
+    align-items: center;
+}
+
+.icona {
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.icona {
+    animation: turn 5s linear infinite;
+    transform-origin: center;
+}
+.icona .move {
+    animation: pohb 3s ease infinite;
+    transform-origin: center;
+}
+.icona .move2 {
+    animation: pohb2 3s ease infinite;
+    animation-delay: 1.5s;
+    transform-origin: center;
+}
+
+@keyframes turn {
+    0% {transform: rotateZ(0deg);}
+    100% {transform: rotateZ(360deg);}
+}
+
+@keyframes pohb {
+    0% {transform: scaleX(1); transform: rotateZ(0deg);}
+    50% {transform: scale(1.5);}
+    100% {transform: scaleX(1); transform: rotateZ(360deg);}
+}
+
+@keyframes pohb2 {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.4);}
+    100% {transform: scale(1);}
+}
